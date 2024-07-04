@@ -212,6 +212,3 @@ bash eval.sh "data/data_release.json" "llm_generations/glm4.jsonl" "evaluation_r
 
 In this example, you can find the results of each scored question in `evaluation_results/glm4_final_results.json`. The statistical data of the final results will be saved in `evaluation_results/glm4_statistics.json`.
 
-## 👏 Contributing
-
-ComplexBench is distributed under CC BY 4.0. And the code of ComplexBench is distributed under the MIT license. Specific information will be disclosed after the paper is published.
