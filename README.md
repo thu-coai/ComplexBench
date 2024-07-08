@@ -1,6 +1,6 @@
 # Benchmarking Complex Instruction-Following with Multiple Constraints Composition
 
-This repository is the official implementation of Benchmarking Complex Instruction-Following with Multiple Constraints Composition. 
+This repository is the official implementation of Benchmarking Complex Instruction-Following with Multiple Constraints Composition. [Our Paper](https://arxiv.org/abs/2407.03978]) 
 
 ## ⚙️ Requirements
 
@@ -212,3 +212,18 @@ bash eval.sh "data/data_release.json" "llm_generations/glm4.jsonl" "evaluation_r
 
 In this example, you can find the results of each scored question in `evaluation_results/glm4_final_results.json`. The statistical data of the final results will be saved in `evaluation_results/glm4_statistics.json`.
 
+## 👏 Citation
+
+```
+@misc{wen2024benchmarkingcomplexinstructionfollowingmultiple,
+      title={Benchmarking Complex Instruction-Following with Multiple Constraints Composition}, 
+      author={Bosi Wen and Pei Ke and Xiaotao Gu and Lindong Wu and Hao Huang and Jinfeng Zhou and Wenchuang Li and Binxin Hu and Wendy Gao and Jiaxin Xu and Yiming Liu and Jie Tang and Hongning Wang and Minlie Huang},
+      year={2024},
+      eprint={2407.03978},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2407.03978}, 
+}
+```
+
+Please kindly cite our paper if this paper and the codes are helpful.
