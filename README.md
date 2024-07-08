@@ -1,6 +1,6 @@
 # Benchmarking Complex Instruction-Following with Multiple Constraints Composition
 
-This repository is the official implementation of Benchmarking Complex Instruction-Following with Multiple Constraints Composition. [Our Paper](https://arxiv.org/abs/2407.03978]) 
+This repository is the official implementation of Benchmarking Complex Instruction-Following with Multiple Constraints Composition. [Our Paper](https://arxiv.org/abs/2407.03978) 
 
 ## ⚙️ Requirements
 
