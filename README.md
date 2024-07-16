@@ -215,14 +215,11 @@ In this example, you can find the results of each scored question in `evaluation
 ## 👏 Citation
 
 ```
-@misc{wen2024benchmarkingcomplexinstructionfollowingmultiple,
-      title={Benchmarking Complex Instruction-Following with Multiple Constraints Composition}, 
-      author={Bosi Wen and Pei Ke and Xiaotao Gu and Lindong Wu and Hao Huang and Jinfeng Zhou and Wenchuang Li and Binxin Hu and Wendy Gao and Jiaxin Xu and Yiming Liu and Jie Tang and Hongning Wang and Minlie Huang},
-      year={2024},
-      eprint={2407.03978},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2407.03978}, 
+@article{wen2024benchmarking,
+  title={Benchmarking Complex Instruction-Following with Multiple Constraints Composition},
+  author={Wen, Bosi and Ke, Pei and Gu, Xiaotao and Wu, Lindong and Huang, Hao and Zhou, Jinfeng and Li, Wenchuang and Hu, Binxin and Gao, Wendy and Xu, Jiaxin and others},
+  journal={arXiv preprint arXiv:2407.03978},
+  year={2024}
 }
 ```
 
