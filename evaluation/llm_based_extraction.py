@@ -83,7 +83,7 @@ def run_extraction(save_path, datas, num_pool):
         tqdm(executor.map(get_answer, _input), total=len(_input), desc='Processing', ncols=100)
 
 
-def get_data(data_path, llm_output_path):
+def get_data(data_path, llm_output_path, language="zh"):
     with open(data_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     with open(llm_output_path, 'r', encoding='utf-8') as f:
@@ -94,20 +94,31 @@ def get_data(data_path, llm_output_path):
         for j, q in enumerate(d['scoring_questions']):
             if q['rule'] == None:
                 continue
-            datas.append({
-                "main_id" : i,
-                "point_id" : j,
-                "instruction" : d['instruction'],
-                "rule" : q['rule'],
-                "question" : q['question'],
-                "output" : o['generated'],
-            })
+            
+            if language == "zh":
+                datas.append({
+                    "main_id" : i,
+                    "point_id" : j,
+                    "instruction" : d['instruction'],
+                    "rule" : q['rule'],
+                    "question" : q['question'],
+                    "output" : o['generated'],
+                })
+            elif language == "en":
+                datas.append({
+                    "main_id" : i,
+                    "point_id" : j,
+                    "instruction" : d['instruction_en'],
+                    "rule" : q['rule'],
+                    "question" : q['question_en'],
+                    "output" : o['generated'],
+                })
     
     return datas
 
 
 def main_run(args):    
-    datas = get_data(data_path=args.data_path, llm_output_path=args.llm_output_path)
+    datas = get_data(data_path=args.data_path, llm_output_path=args.llm_output_path, language=args.language)
     run_extraction(args.output_path, datas, args.num_pool)
 
 
@@ -119,6 +130,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_path", type=str, default="")
     parser.add_argument("--api_key", type=str, default="")
     parser.add_argument("--api_base", type=str, default="")
+    parser.add_argument("--language", type=str, default="zh")
     args = parser.parse_args()
     openai.api_key = args.api_key
     openai.api_base = args.api_base
