@@ -19,6 +19,8 @@ pip install -r requirements.txt
 All data of ComplexBench is placed in `data/data_final.json` . The entire dataset is organized in the format of a list, where each element of the list is an instance of the dataset. The format of an instance is as follows.
 
 - `main_id` (integer): A unique identifier for the instance.
+- `group` (string): The task group identifier for The Coherent Test for Selection (Section 5.2.3). Applicable only in instructions that contain Selection.
+- `idx_in_group` (integer): Number of the instruction in the task group. Applicable only in instructions that contain Selection.
 - `instruction` (string): The actual instruction. 
 - `instruction_en` (string): The actual instruction (English translation). 
 - `task_types` (string): The task type of the instruction. 
@@ -39,6 +41,8 @@ Here is an example of ComplexBench.
 ```json
 {
         "main_id": 899,
+        "group": "complex_instruction_eval_1285",
+        "idx_in_group": 1,
         "instruction": "依次判断以下两个案例中的国家是否有特别提款权。如果有，请写出一篇为该国申请提款的文章，字数不少于300字，且分点明确。如果没有则解释原因，字数不超过100字。\n\n案例1：\n\n国家A是一个发展中国家，是国际货币基金组织（IMF）的成员国，正在经历一场自然灾害，导致该国经济陷入危机，失去了国际支付能力。\n\n案例2：\n\n国家B是一个富裕国家，面临着国内通货膨胀问题，B是IMF的成员国，拥有充足的外汇储备。",
         "instruction_en": "Sequentially determine whether the countries in the following two cases have Special Drawing Rights (SDRs). If they do, please write an article of no less than 300 characters applying for withdrawals for that country, output in bullet points format. If not, explain the reason in no more than 100 characters.\n \nCase 1:\n \nCountry A is a developing country and a member of the International Monetary Fund (IMF). It is currently experiencing a natural disaster, leading to an economic crisis and a loss of international payment capability.\n \nCase 2:\n \nCountry B is a wealthy country facing domestic inflation issues. B is a member of the IMF and has ample foreign exchange reserves.",
         "task_types": "Professional Writing",
@@ -211,3 +215,11 @@ In this example, you can find the results of each scored question in `evaluation
 ```
 
 Please kindly cite our paper if this paper and the codes are helpful.
+
+
+
+#### **Looking forward to your feedback**
+
+Dear reviewers,
+
+Thank you again for your insightful reviews. As the end of the discussion period draws near, we would like to ensure that we have adequately addressed all your concerns. If you have any further feedback, please do not hesitate to let us know.
