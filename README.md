@@ -215,11 +215,3 @@ In this example, you can find the results of each scored question in `evaluation
 ```
 
 Please kindly cite our paper if this paper and the codes are helpful.
-
-
-
-#### **Looking forward to your feedback**
-
-Dear reviewers,
-
-Thank you again for your insightful reviews. As the end of the discussion period draws near, we would like to ensure that we have adequately addressed all your concerns. If you have any further feedback, please do not hesitate to let us know.
